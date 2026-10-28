@@ -14,3 +14,4 @@ Executive portfolio website of **Bill Crawley** — Founder, CEO & Global Busine
 ## Files
 - `index.html` - The complete, self-contained executive portfolio website.
 - `Bill Resume Profile.pdf` - Original executive CV document.
+
