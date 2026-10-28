@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Crawley | Executive Portfolio</title>
+    <meta name="description" content="Executive portfolio of Bill Crawley - Founder, CEO & Global Business Executive based in Dubai, UAE. 30+ years scaling high-growth businesses across Africa, Middle East, Asia, and USA.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (via official CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            950: '#070B14',
+                            900: '#0B132B',
+                            850: '#111A36',
+                            800: '#1C2541',
+                            700: '#2A375A',
+                        },
+                        slate: {
+                            850: '#162032',
+                            750: '#253348',
+                        },
+                        gold: {
+                            400: '#F3C973',
+                            500: '#D4AF37',
+                            600: '#B8972E',
+                        },
+                        accent: {
+                            blue: '#38BDF8',
+                            steel: '#94A3B8'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cinzel', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Smooth subtle background effects */
+        body {
+            background-color: #070B14;
+            color: #E2E8F0;
+            font-family: 'Plus Jakarta Sans', Inter, sans-serif;
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF1CA 0%, #D4AF37 50%, #AA820A 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .navy-card {
+            background: linear-gradient(145deg, rgba(28, 37, 65, 0.75) 0%, rgba(15, 23, 42, 0.85) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            backdrop-filter: blur(12px);
+        }
+
+        .navy-card:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            transform: translateY(-2px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .timeline-line {
+            background: linear-gradient(180deg, #D4AF37 0%, rgba(56, 189, 248, 0.4) 50%, rgba(71, 85, 105, 0.2) 100%);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #070B14;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1C2541;
+            border-radius: 4px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2A375A;
+        }
+
+        @media print {
+            body {
+                background: white !important;
+                color: black !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .navy-card {
+                background: white !important;
+                border: 1px solid #ccc !important;
+                color: black !important;
+            }
+        }
+    </style>
+</head>
+<body class="selection:bg-gold-500 selection:text-navy-950 min-h-screen flex flex-col justify-between">
+
+    <!-- Top Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-navy-950/90 backdrop-blur-md border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Brand / Monogram -->
+            <a href="#top" class="flex items-center gap-3.5 group">
+                <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-navy-800 to-navy-900 border border-gold-500/40 flex items-center justify-center shadow-lg group-hover:border-gold-500 transition-all">
+                    <span class="font-serif font-bold text-gold-400 text-lg tracking-wider">BC</span>
+                </div>
+                <div>
+                    <span class="block text-lg font-semibold tracking-tight text-white group-hover:text-gold-400 transition-colors">Bill Crawley</span>
+                    <span class="block text-xs uppercase tracking-widest text-slate-400 font-medium">Dubai, UAE</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-gold-400 transition-colors">Overview</a>
+                <a href="#leadership" class="hover:text-gold-400 transition-colors">Global Impact</a>
+                <a href="#experience" class="hover:text-gold-400 transition-colors">Career Timeline</a>
+                <a href="#competencies" class="hover:text-gold-400 transition-colors">Expertise</a>
+                <a href="#education" class="hover:text-gold-400 transition-colors">Credentials</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-3">
+                <a href="Bill Resume Profile.pdf" target="_blank" class="no-print hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider text-slate-300 bg-navy-800/80 hover:bg-navy-700 border border-slate-700 transition-all">
+                    <svg class="w-4 h-4 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    PDF CV
+                </a>
+                <a href="#contact" class="px-5 py-2.5 rounded-lg text-xs font-semibold uppercase tracking-wider text-navy-950 bg-gradient-to-r from-gold-400 to-gold-500 hover:from-gold-500 hover:to-gold-600 shadow-md hover:shadow-gold-500/20 transition-all">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main id="top">
+
+        <!-- Hero Section -->
+        <section class="relative pt-20 pb-28 overflow-hidden">
+            <!-- Background Radial Glow -->
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-navy-800/40 blur-[130px] rounded-full pointer-events-none -z-10"></div>
+            <div class="absolute top-10 right-10 w-96 h-96 bg-gold-500/5 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left Hero Text -->
+                    <div class="lg:col-span-8 space-y-6">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-800/90 border border-gold-500/30 text-xs font-medium text-gold-400 tracking-wide shadow-sm">
+                            <span class="w-2 h-2 rounded-full bg-gold-400 animate-pulse"></span>
+                            Global Executive & Board Director
+                        </div>
+
+                        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                            Bill Crawley
+                        </h1>
+
+                        <p class="text-xl sm:text-2xl font-light text-slate-300 font-serif">
+                            Founder, CEO & Global Business Executive
+                        </p>
+
+                        <p class="text-base sm:text-lg text-slate-400 max-w-3xl leading-relaxed font-normal">
+                            Over 30 years of international leadership building and scaling high-growth enterprises across <span class="text-slate-200 font-medium">Africa, Middle East, Asia Pacific, and the US</span>. Proven record launching startups from inception to hundreds of millions in reach, leading 15,000+ person organizations, and advising multinational boards.
+                        </p>
+
+                        <!-- Key Stats Grid -->
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4">
+                            <div class="p-4 rounded-xl bg-navy-900/80 border border-slate-800/90">
+                                <div class="text-2xl sm:text-3xl font-bold text-gold-400 font-serif">30+</div>
+                                <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider">Years Experience</div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-navy-900/80 border border-slate-800/90">
+                                <div class="text-2xl sm:text-3xl font-bold text-accent-blue font-serif">29+</div>
+                                <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider">Countries Scaled</div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-navy-900/80 border border-slate-800/90">
+                                <div class="text-2xl sm:text-3xl font-bold text-white font-serif">15k+</div>
+                                <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider">Workforce Governed</div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-navy-900/80 border border-slate-800/90">
+                                <div class="text-2xl sm:text-3xl font-bold text-gold-400 font-serif">$70M</div>
+                                <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider">Capital Raised (Bubbly)</div>
+                            </div>
+                        </div>
+
+                        <!-- CTA Row -->
+                        <div class="flex flex-wrap items-center gap-4 pt-3">
+                            <a href="#experience" class="px-6 py-3 rounded-lg text-sm font-semibold text-navy-950 bg-gold-500 hover:bg-gold-400 transition-all flex items-center gap-2 shadow-lg shadow-gold-500/10">
+                                View Executive Career
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/bill-crawley" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-lg text-sm font-semibold text-slate-200 bg-navy-800 hover:bg-navy-700 border border-slate-700 transition-all flex items-center gap-2">
+                                <svg class="w-4 h-4 text-[#0A66C2]" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                LinkedIn Profile
+                            </a>
+                            <a href="mailto:bill@tcp.finance" class="px-6 py-3 rounded-lg text-sm font-semibold text-slate-300 hover:text-white bg-slate-800/40 hover:bg-slate-800/70 border border-slate-700/60 transition-all">
+                                bill@tcp.finance
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Executive Crest Card -->
+                    <div class="lg:col-span-4 flex justify-center">
+                        <div class="w-full max-w-sm rounded-2xl navy-card p-8 text-center relative overflow-hidden shadow-2xl">
+                            <!-- Subtle border ornament -->
+                            <div class="w-28 h-28 mx-auto mb-6 rounded-2xl bg-gradient-to-tr from-navy-900 via-navy-800 to-slate-800 border-2 border-gold-500/50 flex items-center justify-center shadow-inner">
+                                <span class="font-serif text-4xl font-bold gold-gradient-text tracking-wider">BC</span>
+                            </div>
+
+                            <h3 class="text-xl font-bold text-white tracking-tight">Bill Crawley</h3>
+                            <p class="text-sm text-gold-400 font-medium mt-1">CEO & Board Director</p>
+                            
+                            <div class="my-6 border-t border-slate-800"></div>
+
+                            <div class="space-y-3 text-left text-xs text-slate-300">
+                                <div class="flex items-center gap-3">
+                                    <svg class="w-4 h-4 text-gold-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                    <span>Dubai, United Arab Emirates</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <svg class="w-4 h-4 text-gold-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                    <span class="truncate">bill@tcp.finance</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <svg class="w-4 h-4 text-gold-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                                    <span>+971 56 737 8988</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <svg class="w-4 h-4 text-gold-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                                    <span>Certified in Blitzscaling (Hoffman & Yeh)</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 pt-5 border-t border-slate-800">
+                                <span class="text-slate-400 text-xs block mb-2">Primary Focus Areas</span>
+                                <div class="flex flex-wrap gap-1.5 justify-center">
+                                    <span class="px-2.5 py-1 rounded bg-navy-800 text-slate-300 text-[11px] border border-slate-700">Emerging Markets</span>
+                                    <span class="px-2.5 py-1 rounded bg-navy-800 text-slate-300 text-[11px] border border-slate-700">Fintech & BPO</span>
+                                    <span class="px-2.5 py-1 rounded bg-navy-800 text-slate-300 text-[11px] border border-slate-700">Telecom & IT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Executive Summary Section -->
+        <section id="about" class="py-20 bg-navy-900/60 border-y border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="max-w-3xl mb-12">
+                    <h2 class="text-xs uppercase tracking-widest text-gold-400 font-semibold mb-2">Executive Overview</h2>
+                    <h3 class="text-3xl font-bold text-white tracking-tight">Decades of Scale, Governance, and Expansion</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-slate-300 text-base leading-relaxed">
+                    <div class="navy-card p-8 rounded-2xl space-y-4">
+                        <h4 class="text-lg font-semibold text-white font-serif flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-gold-400"></span>
+                            Origins & Global Track Record
+                        </h4>
+                        <p>
+                            Bill started his career at <strong>IBM</strong> and brings more than <strong>30 years of global executive experience</strong> to his leadership based in Dubai. He has a long history of building internationally successful, high-growth businesses with a particular focus on growth and emerging markets.
+                        </p>
+                        <p>
+                            His deep operational expertise spans <strong>Business Startup, Global Expansion, Strategic Planning, Strategic Marketing, High-Stakes Negotiation, Partner Management,</strong> and <strong>Go-to-Market Business Planning</strong>.
+                        </p>
+                    </div>
+
+                    <div class="navy-card p-8 rounded-2xl space-y-4">
+                        <h4 class="text-lg font-semibold text-white font-serif flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-accent-blue"></span>
+                            Leadership at Pan-Regional Scale
+                        </h4>
+                        <p>
+                            As the start-up Managing Director/CEO of <strong>MARA ISON</strong>, Bill led the launch and expansion of operations across <strong>23 countries in the Middle East and Africa</strong> with a team of over 400 people operating across 18 local languages.
+                        </p>
+                        <p>
+                            In addition, Bill has held numerous <strong>Board of Director and advisory board positions</strong> for leading Systems Integration, Managed Service Providers (MSPs), Business Process Outsourcing (BPO), and Value-Added Services (VAS) companies in Dubai, Egypt, Singapore, Philippines, India, Africa, the UK, and the USA.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Global Leadership & Scale Highlights -->
+        <section id="leadership" class="py-24">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs uppercase tracking-widest text-gold-400 font-semibold mb-3">Milestones & Scale</h2>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Proven Global Expansion Milestones</h3>
+                    <p class="text-slate-400 mt-4 text-base">Key executive milestones achieved across global telecom, IT services, social networks, and fintech ventures.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- Milestone 1: ISON Group -->
+                    <div class="navy-card p-7 rounded-2xl flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs font-semibold uppercase tracking-wider text-gold-400 mb-2">Governance & Scale</div>
+                            <h4 class="text-xl font-bold text-white mb-3">ISON Group</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Board appointment for an organization employing over <strong>15,000 people across 29 countries</strong> in Africa, Middle East, and Asia.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400 font-medium">
+                            Africa &bull; Middle East &bull; Asia
+                        </div>
+                    </div>
+
+                    <!-- Milestone 2: Mara-Ison Launch -->
+                    <div class="navy-card p-7 rounded-2xl flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs font-semibold uppercase tracking-wider text-accent-blue mb-2">Pan-African Launch</div>
+                            <h4 class="text-xl font-bold text-white mb-3">41 Regional Offices</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Built and launched a Pan-African IT services company with <strong>41 offices across 21 African countries</strong> in addition to Dubai and India headquarters.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400 font-medium">
+                            21 African Nations + Dubai + India
+                        </div>
+                    </div>
+
+                    <!-- Milestone 3: Bubbly / Bubble Motion -->
+                    <div class="navy-card p-7 rounded-2xl flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs font-semibold uppercase tracking-wider text-gold-400 mb-2">Social & Telecom Scale</div>
+                            <h4 class="text-xl font-bold text-white mb-3">200M+ Users</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Raised <strong>$70M</strong> from Sequoia Capital, JAFCO, and SingTel Innov8. Built global telecom carrier partnerships with operations across 14 countries.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400 font-medium">
+                            Forbes Top 15 Social Networks
+                        </div>
+                    </div>
+
+                    <!-- Milestone 4: Net2Phone VoIP -->
+                    <div class="navy-card p-7 rounded-2xl flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs font-semibold uppercase tracking-wider text-accent-blue mb-2">Market Dominance</div>
+                            <h4 class="text-xl font-bold text-white mb-3">62% Market Share</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Controlled <strong>62% market share</strong> of retail VoIP minutes in India within 12 months, scaling operations across 16 major Asia Pacific markets.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400 font-medium">
+                            16 Asia Pacific Markets
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Career Timeline -->
+        <section id="experience" class="py-24 bg-navy-900/40 border-t border-slate-800">
+            <div class="max-w-5xl mx-auto px-6">
+                
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-xs uppercase tracking-widest text-gold-400 font-semibold mb-3">Career History</h2>
+                    <h3 class="text-3xl font-bold text-white tracking-tight">Executive Roles & Track Record</h3>
+                    <p class="text-slate-400 mt-2 text-sm">Chronological record of leadership appointments, advisory roles, and ventures founded.</p>
+                </div>
+
+                <!-- Timeline Container -->
+                <div class="relative pl-6 sm:pl-10 space-y-12 before:absolute before:left-2 sm:before:left-3 before:top-3 before:bottom-3 before:w-0.5 before:bg-gradient-to-b before:from-gold-400 before:via-slate-700 before:to-slate-800">
+
+                    <!-- Role 1: GDCS FZ -->
+                    <div class="relative group">
+                        <div class="absolute -left-[30px] sm:-left-[38px] top-1.5 w-4 h-4 rounded-full bg-gold-400 border-4 border-navy-950 shadow-md"></div>
+                        <div class="navy-card p-6 sm:p-8 rounded-2xl">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <h4 class="text-xl font-bold text-white">GDCS FZ</h4>
+                                    <p class="text-gold-400 font-medium text-sm">Chief Executive Officer (CEO)</p>
+                                </div>
+                                <div class="text-xs font-semibold px-3 py-1 rounded bg-navy-800 text-slate-300 border border-slate-700 self-start sm:self-auto">
+                                    August 2024 – Present &bull; Dubai, UAE
+                                </div>
+                            </div>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                IT business and restructuring advisory services. Digital strategic investment.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Role 2: ISON Technologies -->
+                    <div class="relative group">
+                        <div class="absolute -left-[30px] sm:-left-[38px] top-1.5 w-4 h-4 rounded-full bg-gold-400 border-4 border-navy-950"></div>
+                        <div class="navy-card p-6 sm:p-8 rounded-2xl">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <h4 class="text-xl font-bold text-white">ISON Technologies</h4>
+                                    <p class="text-gold-400 font-medium text-sm">Managing Director and Board Member</p>
+                                </div>
+                                <div class="text-xs font-semibold px-3 py-1 rounded bg-navy-800 text-slate-300 border border-slate-700 self-start sm:self-auto">
+                                    August 2016 – Present &bull; Dubai
+                                </div>
+                            </div>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Executive leadership and board stewardship for enterprise technology solutions and systems integration.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Role 3: ISON Group Africa -->
+                    <div class="relative group">
+                        <div class="absolute -left-[30px] sm:-left-[38px] top-1.5 w-4 h-4 rounded-full bg-gold-400 border-4 border-navy-950"></div>
+                        <div class="navy-card p-6 sm:p-8 rounded-2xl">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <h4 class="text-xl font-bold text-white">ISON Group Africa</h4>
+                                    <p class="text-gold-400 font-medium text-sm">Board Director</p>
+                                </div>
+                                <div class="text-xs font-semibold px-3 py-1 rounded bg-navy-800 text-slate-300 border border-slate-700 self-start sm:self-auto">
+                                    February 2014 – Present &bull; Africa, Middle East, Asia
+                                </div>
+                            </div>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Board director for ISON Group, governing an enterprise workforce of over 15,000 people across 29 countries in Africa, Middle East, and Asia.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Role 4: Trade Capital Partners -->
+                    <div class="relative group">
+                        <div class="absolute -left-[30px] sm:-left-[38px] top-1.5 w-4 h-4 rounded-full bg-accent-blue border-4 border-navy-950"></div>
+                        <div class="navy-card p-6 sm:p-8 rounded-2xl">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <h4 class="text-xl font-bold text-white">Trade Capital Partners</h4>
+                                    <p class="text-accent-blue font-medium text-sm">Founder</p>
+                                </div>
+                                <div class="text-xs font-semibold px-3 py-1 rounded bg-navy-800 text-slate-300 border border-slate-700 self-start sm:self-auto">
+                                    September 2020 – Present &bull; Dubai, UAE
+                                </div>
+                            </div>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Founded trade and working capital financial services venture headquartered in Dubai.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Role 5: Tribal Credit -->
+                    <div class="relative group">
+                        <div class="absolute -left-[30px] sm:-left-[38px] top-1.5 w-4 h-4 rounded-full bg-slate-500 border-4 border-navy-950"></div>
+                        <div class="navy-card p-6 sm:p-8 rounded-2xl">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <h4 class="text-xl font-bold text-white">Tribal Credit</h4>
+                                    <p class="text-slate-300 font-medium text-sm">Co-Founder</p>
+                                </div>
+                                <div class="text-xs font-semibold px-3 py-1 rounded bg-navy-800 text-slate-300 border border-slate-700 self-start sm:self-auto">
+                                    May 2019 – June 2020 &bull; Dubai, UAE
+                                </div>
+                            </div>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Co-founded B2B corporate card and financial technology platform catering to emerging market enterprises.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Role 6: TASC Outsourcing -->
+                    <div class="relative group">
+                        <div class="absolute -left-[30px] sm:-left-[38px] top-1.5 w-4 h-4 rounded-full bg-slate-500 border-4 border-navy-950"></div>
+                        <div class="navy-card p-6 sm:p-8 rounded-2xl">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <h4 class="text-xl font-bold text-white">TASC Outsourcing</h4>
+                                    <p class="text-slate-300 font-medium text-sm">Chief Operating Officer (COO)</p>
+                                </div>
+                                <div class="text-xs font-semibold px-3 py-1 rounded bg-navy-800 text-slate-300 border border-slate-700 self-start sm:self-auto">
+                                    January 2015 – December 2015 &bull; Dubai, Abu Dhabi, Bangalore
+                                </div>
+                            </div>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Executive operations oversight spanning staffing, managed services, and workforce solutions across the UAE and India.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Role 7: iSON Technologies (Launch Phase) -->
+                    <div class="relative group">
+                        <div class="absolute -left-[30px] sm:-left-[38px] top-1.5 w-4 h-4 rounded-full bg-slate-500 border-4 border-navy-950"></div>
+                        <div class="navy-card p-6 sm:p-8 rounded-2xl">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <h4 class="text-xl font-bold text-white">iSON Technologies (Mara-Ison)</h4>
+                                    <p class="text-slate-300 font-medium text-sm">Managing Director</p>
+                                </div>
+                                <div class="text-xs font-semibold px-3 py-1 rounded bg-navy-800 text-slate-300 border border-slate-700 self-start sm:self-auto">
+                                    February 2011 – April 2014 &bull; UAE / Pan Africa
+                                </div>
+                            </div>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Responsible for the launch and growth of Mara-Ison as a Pan-African IT services company with 41 offices across 21 African countries, plus operations in Dubai and India, reporting directly to shareholders.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Role 8: ESCO Audio Visual Ltd -->
+                    <div class="relative group">
+                        <div class="absolute -left-[30px] sm:-left-[38px] top-1.5 w-4 h-4 rounded-full bg-slate-500 border-4 border-navy-950"></div>
+                        <div class="navy-card p-6 sm:p-8 rounded-2xl">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <h4 class="text-xl font-bold text-white">ESCO Audio Visual Ltd</h4>
+                                    <p class="text-slate-300 font-medium text-sm">Board Member (1992–2013) &bull; Managing Director, Promoter (1992–1997)</p>
+                                </div>
+                                <div class="text-xs font-semibold px-3 py-1 rounded bg-navy-800 text-slate-300 border border-slate-700 self-start sm:self-auto">
+                                    February 1992 – February 2013 (21 Years) &bull; Singapore
+                                </div>
+                            </div>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Provider of Voice, Video and Data System Integration, Distribution and Managed Services. Expanded Esco from initial integration projects exclusively in Singapore to regional operations in Malaysia, Hong Kong, Philippines, India, and Indonesia. Grew the business from 1 to 6 offices.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Role 9: Bubble Motion (Bubbly) -->
+                    <div class="relative group">
+                        <div class="absolute -left-[30px] sm:-left-[38px] top-1.5 w-4 h-4 rounded-full bg-slate-500 border-4 border-navy-950"></div>
+                        <div class="navy-card p-6 sm:p-8 rounded-2xl">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <h4 class="text-xl font-bold text-white">Bubble Motion</h4>
+                                    <p class="text-slate-300 font-medium text-sm">V.P. Worldwide Sales (2009–2011) &bull; V.P. Sales Asia Pac / MEA (2005–2009)</p>
+                                </div>
+                                <div class="text-xs font-semibold px-3 py-1 rounded bg-navy-800 text-slate-300 border border-slate-700 self-start sm:self-auto">
+                                    September 2005 – April 2011 &bull; Singapore & Global
+                                </div>
+                            </div>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-3">
+                                Bubbly raised $70M from Sequoia Capital, JAFCO, SingTel Innov8 and other prominent investors, becoming the mobile social media leader across Asia with 200M+ users across several services and operations in 14 countries globally. Listed in Forbes among the top 15 most successful social networks.
+                            </p>
+                            <p class="text-slate-400 text-xs">
+                                Built an internal sales organization for global coverage (Asia Pacific, Japan, India, Middle East, Turkey, Africa, Europe, USA, Latam). Led business development, partner networks, strategic planning, and sales team management.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Role 10: Net2Phone -->
+                    <div class="relative group">
+                        <div class="absolute -left-[30px] sm:-left-[38px] top-1.5 w-4 h-4 rounded-full bg-slate-500 border-4 border-navy-950"></div>
+                        <div class="navy-card p-6 sm:p-8 rounded-2xl">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <h4 class="text-xl font-bold text-white">Net2Phone</h4>
+                                    <p class="text-slate-300 font-medium text-sm">Managing Director Asia Pacific</p>
+                                </div>
+                                <div class="text-xs font-semibold px-3 py-1 rounded bg-navy-800 text-slate-300 border border-slate-700 self-start sm:self-auto">
+                                    February 2002 – April 2005 &bull; Singapore
+                                </div>
+                            </div>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-2">
+                                Established Net2Phone's presence in India; captured <strong>62% market share of retail VoIP minutes within 12 months</strong>. Established regional office and team in Singapore from company registration onwards.
+                            </p>
+                            <p class="text-slate-400 text-xs">
+                                Defined, developed, and implemented Regional Strategy for Asia Pacific and India with P/L responsibility across 16 diverse major markets. Negotiated strategic partnership agreements with regional Telcos, mobile operators, and ISPs in Thailand, India, Philippines, Hong Kong, Vietnam, Indonesia, and Taiwan.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Role 11: Dishnet SEACN -->
+                    <div class="relative group">
+                        <div class="absolute -left-[30px] sm:-left-[38px] top-1.5 w-4 h-4 rounded-full bg-slate-500 border-4 border-navy-950"></div>
+                        <div class="navy-card p-6 sm:p-8 rounded-2xl">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <h4 class="text-xl font-bold text-white">Dishnet SEACN</h4>
+                                    <p class="text-slate-300 font-medium text-sm">Senior V.P Sales & Marketing</p>
+                                </div>
+                                <div class="text-xs font-semibold px-3 py-1 rounded bg-navy-800 text-slate-300 border border-slate-700 self-start sm:self-auto">
+                                    October 1999 – February 2002 &bull; Chennai Area, India & Singapore
+                                </div>
+                            </div>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Led business and marketing plans from inception, representing the submarine cable project to financial institutions, investors, and regulatory bodies. Served on system strategy committee, negotiated main supply contracts, developed Co-marketing agreement with TyCom Ltd. (USA), oversaw dark fibre sales, and managed Asia Pacific Telco/operator relations.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Role 12: Silverslate Ltd -->
+                    <div class="relative group">
+                        <div class="absolute -left-[30px] sm:-left-[38px] top-1.5 w-4 h-4 rounded-full bg-slate-500 border-4 border-navy-950"></div>
+                        <div class="navy-card p-6 sm:p-8 rounded-2xl">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <h4 class="text-xl font-bold text-white">Silverslate Ltd</h4>
+                                    <p class="text-slate-300 font-medium text-sm">Partner / Promoter</p>
+                                </div>
+                                <div class="text-xs font-semibold px-3 py-1 rounded bg-navy-800 text-slate-300 border border-slate-700 self-start sm:self-auto">
+                                    February 1998 – November 1999 &bull; London, UK & Belgium
+                                </div>
+                            </div>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Software development and niche manpower services focused on telecom switching infrastructure, in particular GSM Base Station control and switching.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Role 13: IBM Offshore Operations -->
+                    <div class="relative group">
+                        <div class="absolute -left-[30px] sm:-left-[38px] top-1.5 w-4 h-4 rounded-full bg-slate-600 border-4 border-navy-950"></div>
+                        <div class="navy-card p-6 sm:p-8 rounded-2xl">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <h4 class="text-xl font-bold text-white">IBM Offshore Operations</h4>
+                                    <p class="text-slate-300 font-medium text-sm">Sales / Marketing Executive</p>
+                                </div>
+                                <div class="text-xs font-semibold px-3 py-1 rounded bg-navy-800 text-slate-300 border border-slate-700 self-start sm:self-auto">
+                                    January 1986 – February 1992 (6 Years 2 Months) &bull; Australia & India
+                                </div>
+                            </div>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Started career at IBM. Part of IBM's Offshore Operations team (pre-reentry team to India). Handled enterprise sales and marketing across Oil & Gas, Steel Industry, and West Australian Public Sector in Perth and Sydney.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Core Competencies & Skills -->
+        <section id="competencies" class="py-24">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="max-w-3xl mb-16">
+                    <h2 class="text-xs uppercase tracking-widest text-gold-400 font-semibold mb-2">Capabilities</h2>
+                    <h3 class="text-3xl font-bold text-white tracking-tight">Core Executive Competencies</h3>
+                    <p class="text-slate-400 mt-2 text-sm">Specialized expertise honed through 30+ years of building and advising international enterprises.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <div class="navy-card p-6 rounded-xl">
+                        <div class="w-10 h-10 rounded-lg bg-navy-800 flex items-center justify-center text-gold-400 mb-4 border border-gold-500/20">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">Business Startup & Blitzscaling</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">Founding, funding, and scaling ventures from initial concept into multinational operations across rapid-growth phases.</p>
+                    </div>
+
+                    <div class="navy-card p-6 rounded-xl">
+                        <div class="w-10 h-10 rounded-lg bg-navy-800 flex items-center justify-center text-accent-blue mb-4 border border-accent-blue/20">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">Global Expansion & Emerging Markets</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">Extensive on-the-ground track record launching multi-country operations across Africa, Middle East, Asia Pac, and US.</p>
+                    </div>
+
+                    <div class="navy-card p-6 rounded-xl">
+                        <div class="w-10 h-10 rounded-lg bg-navy-800 flex items-center justify-center text-gold-400 mb-4 border border-gold-500/20">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">Board Governance & Advisory</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">Longstanding Board of Director appointments for leading Systems Integration, Managed Service Providers, BPO, and VAS firms.</p>
+                    </div>
+
+                    <div class="navy-card p-6 rounded-xl">
+                        <div class="w-10 h-10 rounded-lg bg-navy-800 flex items-center justify-center text-slate-300 mb-4 border border-slate-700">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">Partner & Telco Network Relations</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">Negotiating strategic partnerships, distribution pacts, and co-marketing agreements with regional telcos, ISPs, and tech providers.</p>
+                    </div>
+
+                    <div class="navy-card p-6 rounded-xl">
+                        <div class="w-10 h-10 rounded-lg bg-navy-800 flex items-center justify-center text-slate-300 mb-4 border border-slate-700">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">Go-to-Market & Strategic Marketing</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">Developing and executing comprehensive GTM strategies with full P&L accountability across disparate international territories.</p>
+                    </div>
+
+                    <div class="navy-card p-6 rounded-xl">
+                        <div class="w-10 h-10 rounded-lg bg-navy-800 flex items-center justify-center text-slate-300 mb-4 border border-slate-700">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">Restructuring & Digital Investment</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">Restructuring advisory, strategic capital deployment, and organizational design for enterprise technology services.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Certifications -->
+        <section id="education" class="py-20 bg-navy-900/60 border-y border-slate-800">
+            <div class="max-w-7xl mx-auto px-6">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    
+                    <!-- Education -->
+                    <div>
+                        <h2 class="text-xs uppercase tracking-widest text-gold-400 font-semibold mb-2">Academic Foundation</h2>
+                        <h3 class="text-2xl font-bold text-white mb-6">Education</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="navy-card p-6 rounded-xl">
+                                <span class="text-xs text-gold-400 font-semibold block uppercase">1982 – 1986</span>
+                                <h4 class="text-lg font-bold text-white mt-1">The University of Western Australia</h4>
+                                <p class="text-slate-300 text-sm mt-0.5">Master’s Degree, Education</p>
+                            </div>
+
+                            <div class="navy-card p-6 rounded-xl">
+                                <h4 class="text-lg font-bold text-white">The University of Western Australia</h4>
+                                <p class="text-slate-300 text-sm mt-0.5">Bachelor’s Degree, BPEd</p>
+                            </div>
+
+                            <div class="navy-card p-6 rounded-xl">
+                                <h4 class="text-lg font-bold text-white">Mount Lawley High School</h4>
+                                <p class="text-slate-400 text-sm mt-0.5">Western Australia</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certifications & Top Skills -->
+                    <div>
+                        <h2 class="text-xs uppercase tracking-widest text-gold-400 font-semibold mb-2">Executive Credentials</h2>
+                        <h3 class="text-2xl font-bold text-white mb-6">Certifications & Primary Skills</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="navy-card p-6 rounded-xl border-l-4 border-l-gold-500">
+                                <div class="text-xs uppercase tracking-widest text-gold-400 font-semibold mb-1">Executive Certification</div>
+                                <h4 class="text-lg font-bold text-white">Blitzscaling</h4>
+                                <p class="text-slate-300 text-sm mt-1">Certified by Reid Hoffman and Chris Yeh</p>
+                                <p class="text-xs text-slate-400 mt-2">Techniques for building massively valuable companies at lightning speed, navigating rapid organizational expansion, and managing high-uncertainty growth.</p>
+                            </div>
+
+                            <div class="navy-card p-6 rounded-xl">
+                                <h4 class="text-sm font-semibold uppercase tracking-wider text-slate-300 mb-3">Top Endorsed Skills</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3.5 py-1.5 rounded-lg bg-navy-800 text-gold-400 font-medium text-xs border border-gold-500/30">Product Management</span>
+                                    <span class="px-3.5 py-1.5 rounded-lg bg-navy-800 text-accent-blue font-medium text-xs border border-accent-blue/30">Business Development</span>
+                                    <span class="px-3.5 py-1.5 rounded-lg bg-navy-800 text-white font-medium text-xs border border-slate-700">Executive Management</span>
+                                    <span class="px-3.5 py-1.5 rounded-lg bg-navy-800 text-slate-300 font-medium text-xs border border-slate-700">Strategic Planning</span>
+                                    <span class="px-3.5 py-1.5 rounded-lg bg-navy-800 text-slate-300 font-medium text-xs border border-slate-700">Global Expansion</span>
+                                    <span class="px-3.5 py-1.5 rounded-lg bg-navy-800 text-slate-300 font-medium text-xs border border-slate-700">Board Governance</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Direct Contact Section -->
+        <section id="contact" class="py-24 relative overflow-hidden">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                
+                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold-400 to-gold-600 text-navy-950 font-serif font-bold text-2xl flex items-center justify-center mx-auto mb-6 shadow-xl">
+                    BC
+                </div>
+
+                <h2 class="text-xs uppercase tracking-widest text-gold-400 font-semibold mb-2">Connect Directly</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-4">Board, Advisory & Strategic Inquiries</h3>
+                <p class="text-slate-300 max-w-xl mx-auto text-base mb-10">
+                    Based in Dubai with ongoing directorships and investments across Africa, the Middle East, and Asia.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
+                    
+                    <!-- Email Card -->
+                    <a href="mailto:bill@tcp.finance" class="navy-card p-6 rounded-2xl block group">
+                        <div class="text-xs uppercase tracking-wider text-slate-400 mb-1">Direct Email</div>
+                        <div class="text-base font-semibold text-white group-hover:text-gold-400 transition-colors truncate">
+                            bill@tcp.finance
+                        </div>
+                        <div class="text-xs text-gold-400 mt-3 flex items-center gap-1 font-medium">
+                            Send email &rarr;
+                        </div>
+                    </a>
+
+                    <!-- Phone Card -->
+                    <a href="tel:+971567378988" class="navy-card p-6 rounded-2xl block group">
+                        <div class="text-xs uppercase tracking-wider text-slate-400 mb-1">Mobile / Direct</div>
+                        <div class="text-base font-semibold text-white group-hover:text-gold-400 transition-colors">
+                            +971 56 737 8988
+                        </div>
+                        <div class="text-xs text-gold-400 mt-3 flex items-center gap-1 font-medium">
+                            Call direct &rarr;
+                        </div>
+                    </a>
+
+                    <!-- LinkedIn Card -->
+                    <a href="https://www.linkedin.com/in/bill-crawley" target="_blank" rel="noopener noreferrer" class="navy-card p-6 rounded-2xl block group">
+                        <div class="text-xs uppercase tracking-wider text-slate-400 mb-1">LinkedIn Network</div>
+                        <div class="text-base font-semibold text-white group-hover:text-gold-400 transition-colors truncate">
+                            in/bill-crawley
+                        </div>
+                        <div class="text-xs text-[#0A66C2] mt-3 flex items-center gap-1 font-medium">
+                            View LinkedIn profile &rarr;
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy-950 border-t border-slate-800/80 py-8">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+            <div class="flex items-center gap-2">
+                <span class="font-semibold text-slate-300">Bill Crawley</span>
+                <span>&bull;</span>
+                <span>Executive Portfolio</span>
+                <span>&bull;</span>
+                <span>Dubai, United Arab Emirates</span>
+            </div>
+            <div>
+                Source profile verified &bull; Updated October 2026
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
